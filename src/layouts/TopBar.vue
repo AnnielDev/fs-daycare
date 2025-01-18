@@ -14,7 +14,6 @@ function handleToggle() {
   if (dropDownMenu.value) {
     dropDownMenu.value.classList.toggle('open')
     dropDownIsOpen.value = dropDownMenu.value.classList.contains('open')
-    window.scrollTo(0, 1000)
   }
 }
 
