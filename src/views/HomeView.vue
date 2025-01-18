@@ -104,7 +104,7 @@ article {
 
 article > h4 {
   color: #dca904;
-  line-height: 4;
+  line-height: 3;
 }
 
 .icon {

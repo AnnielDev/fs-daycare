@@ -10,8 +10,15 @@ const dropDownIsOpen = ref(true)
 function handleToggle() {
   if (dropDownMenu.value) {
     dropDownMenu.value.classList.toggle('open')
-    const isOpen = dropDownMenu.value.classList.contains('open')
-    dropDownIsOpen.value = isOpen
+    dropDownIsOpen.value = dropDownMenu.value.classList.contains('open')
+    window.scrollTo(0, 1000)
+  }
+}
+
+function scrollTo() {
+  const contactSection = document.querySelector('#contact')
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: 'smooth' })
   }
 }
 </script>
@@ -33,9 +40,12 @@ function handleToggle() {
         >
       </nav>
 
-      <a class="flex items-center gap-2 border border-black px-4 py-2 rounded-full" href="#contact">
+      <button
+        class="flex items-center gap-2 border border-black px-4 py-2 rounded-full"
+        :onclick="scrollTo"
+      >
         Contact Us <BsArrowRight />
-      </a>
+      </button>
       <div :onclick="handleToggle" class="toggle_btn">
         <CgMenu v-if="!dropDownIsOpen" />
         <AnOutlinedClose v-else />
@@ -53,12 +63,12 @@ function handleToggle() {
         >
       </li>
       <li>
-        <a
-          href="#contact"
+        <button
           class="flex items-center cursor-pointer gap-2 w-full justify-center border mr-auto text-[#0f172a] ml-auto border-black px-4 py-2 rounded-full"
+          :onclick="scrollTo"
         >
           Contact Us <BsArrowRight />
-        </a>
+        </button>
       </li>
     </div>
   </header>
@@ -124,7 +134,7 @@ header {
 }
 @media (max-width: 1024px) {
   nav,
-  .navbar a {
+  .navbar button {
     display: none;
   }
 
