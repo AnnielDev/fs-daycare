@@ -1,12 +1,15 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { RouterView, RouterLink } from 'vue-router'
+import { RouterView, RouterLink, useRoute, useRouter } from 'vue-router'
 import { AnOutlinedClose } from '@kalimahapps/vue-icons'
 import { BsArrowRight } from '@kalimahapps/vue-icons'
 import { CgMenu } from '@kalimahapps/vue-icons'
 
+const route = useRoute()
+const router = useRouter()
 const dropDownMenu = ref<HTMLDivElement | null>(null)
 const dropDownIsOpen = ref(true)
+
 function handleToggle() {
   if (dropDownMenu.value) {
     dropDownMenu.value.classList.toggle('open')
@@ -15,10 +18,18 @@ function handleToggle() {
   }
 }
 
-function scrollTo() {
-  const contactSection = document.querySelector('#contact')
-  if (contactSection) {
-    contactSection.scrollIntoView({ behavior: 'smooth' })
+async function scrollTo() {
+  if (route.name == 'activities') {
+    await router.push({ name: 'home' })
+    const contactSection = document.querySelector('#contact')
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' })
+    }
+  } else {
+    const contactSection = document.querySelector('#contact')
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 }
 </script>
