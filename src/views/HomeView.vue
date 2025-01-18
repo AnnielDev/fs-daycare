@@ -48,7 +48,7 @@ import { AkTiktokFill, AkInstagramFill } from '@kalimahapps/vue-icons'
         </article>
         <article>
           <h4 class="capitalize font-medium">our location</h4>
-          <span class="text-[#0f172a]">Location</span>
+          <span class="text-[#0f172a]">1114 W Liberty st allentown P.A 18102</span>
         </article>
         <article>
           <h4 class="capitalize font-medium">contact us</h4>
