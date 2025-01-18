@@ -54,6 +54,7 @@ import { AkTiktokFill, AkInstagramFill } from '@kalimahapps/vue-icons'
           <h4 class="capitalize font-medium">contact us</h4>
           <span class="text-[#0f172a]">+1 484-506-3720</span>
           <span class="lowercase text-[#0f172a]">FSDAYCARE1114@GMAIL.COM</span>
+          <span class="lowercase text-[#0f172a]">frankberroa5@gmail.com</span>
         </article>
       </div>
     </section>
