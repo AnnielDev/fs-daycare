@@ -54,7 +54,7 @@ async function scrollTo() {
           v-for="(route, index) in routes"
           :key="index"
           :to="route.route"
-          class="link lg:text-lg max-lg:text-md font-normal text-[#0f172a]"
+          class="link capitalize lg:text-lg max-lg:text-md font-normal text-[#0f172a]"
           >{{ route.name }}</RouterLink
         >
       </nav>
