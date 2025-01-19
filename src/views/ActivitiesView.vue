@@ -2,11 +2,11 @@
 import {
   BsMusicNoteBeamed,
   BsBookFill,
-  AkTiktokFill,
-  AkInstagramFill,
   FaPaintbrush,
   AnOutlinedScissor,
 } from '@kalimahapps/vue-icons'
+
+import FooterDaycare from '@/components/FooterDaycare.vue'
 </script>
 <template>
   <main>
@@ -97,19 +97,7 @@ import {
     </section>
   </main>
 
-  <footer
-    class="flex justify-between md:items-center max-lg:gap-4 bg-[#fffee8] px-10 py-4 max-lg:flex-col"
-  >
-    <div class="flex items-center gap-4">
-      <a href="https://www.tiktok.com/@frankberroa?_t=ZP-8t9JcoZW74Q&_r=1" target="_blank">
-        <AkTiktokFill class="icon" />
-      </a>
-      <a href="https://www.instagram.com/frankberroa5/" target="_blank">
-        <AkInstagramFill class="icon" />
-      </a>
-    </div>
-    <span>© FS Daycare 2025, Creating a World of Fun and Learning</span>
-  </footer>
+  <FooterDaycare />
 </template>
 
 <style scoped>
@@ -133,9 +121,7 @@ img {
   border-radius: 20px;
   border: 1px solid #c8c8c8;
 }
-.icon {
-  font-size: 20px;
-}
+
 .scissor-icon {
   font-size: 30px;
 }

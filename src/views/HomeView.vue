@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { AkTiktokFill, AkInstagramFill } from '@kalimahapps/vue-icons'
+import FooterDaycare from '@/components/FooterDaycare.vue'
 </script>
 
 <template>
@@ -21,11 +21,20 @@ import { AkTiktokFill, AkInstagramFill } from '@kalimahapps/vue-icons'
       <img
         src="../assets/kid.jpg"
         alt="image-kid"
-        class="ml-auto mr-auto p-3 animate__animated animate__fadeIn"
+        class="img ml-auto mr-auto p-3 animate__animated animate__fadeIn"
       />
     </section>
+    <section class="flex flex-col items-center gap-2 justify-center my-10">
+      <img
+        src="../assets/owners.jpg"
+        alt=""
+        class="w-[250px] h-[250px] max-lg:w-[200px] max-lg:h-[200px] shadow-gray-300 shadow-lg rounded-full"
+      />
 
-    <section class="flex max-lg:flex-wrap mt-10">
+      <span class="text-[#0f172a] lg:text-xl font-semibold">Frank Berroa and Sofia Castro</span>
+      <span class="text-[#0f172a] lg:text-xl font-semibold">(Owners)</span>
+    </section>
+    <section class="flex max-lg:flex-wrap">
       <div class="flex flex-col gap-6 mb-6">
         <h2 class="lg:text-6xl font-semibold max-lg:text-4xl text-[#0f172a]">
           Get in Touch with FS Daycare
@@ -35,7 +44,7 @@ import { AkTiktokFill, AkInstagramFill } from '@kalimahapps/vue-icons'
         >
       </div>
       <div>
-        <img src="../assets/kid2.jpg" class="ml-auto mr-auto p-3" alt="" />
+        <img src="../assets/kid2.jpg" class="img ml-auto mr-auto p-3" alt="" />
       </div>
     </section>
 
@@ -60,19 +69,7 @@ import { AkTiktokFill, AkInstagramFill } from '@kalimahapps/vue-icons'
     </section>
   </main>
 
-  <footer
-    class="flex justify-between md:items-center max-lg:gap-4 bg-[#fffee8] px-10 py-4 max-lg:flex-col"
-  >
-    <div class="flex items-center gap-4">
-      <a href="https://www.tiktok.com/@frankberroa?_t=ZP-8t9JcoZW74Q&_r=1" target="_blank">
-        <AkTiktokFill class="icon" />
-      </a>
-      <a href="https://www.instagram.com/frankberroa5/" target="_blank">
-        <AkInstagramFill class="icon" />
-      </a>
-    </div>
-    <span>© FS Daycare 2025, Creating a World of Fun and Learning</span>
-  </footer>
+  <FooterDaycare />
 </template>
 
 <style scoped>
@@ -91,7 +88,7 @@ main {
 p {
   color: #0f172a;
 }
-img {
+.img {
   border-radius: 20px;
   border: 1px solid #c8c8c8;
 }
