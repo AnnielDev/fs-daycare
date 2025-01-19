@@ -9,7 +9,17 @@ const route = useRoute()
 const router = useRouter()
 const dropDownMenu = ref<HTMLDivElement | null>(null)
 const dropDownIsOpen = ref(true)
+const routes = [
+  {
+    name: 'home',
+    route: '/',
+  },
 
+  {
+    name: 'activities',
+    route: '/activities',
+  },
+]
 function handleToggle() {
   if (dropDownMenu.value) {
     dropDownMenu.value.classList.toggle('open')
@@ -40,13 +50,12 @@ async function scrollTo() {
         <h2 class="lg:text-xl max-lg:text-lg font-bold text-[#0f172a]">FS Daycare</h2>
       </div>
       <nav class="nav flex gap-10">
-        <RouterLink to="/" class="link lg:text-lg max-lg:text-md font-normal text-[#0f172a]"
-          >Home</RouterLink
-        >
         <RouterLink
-          to="/activities"
+          v-for="(route, index) in routes"
+          :key="index"
+          :to="route.route"
           class="link lg:text-lg max-lg:text-md font-normal text-[#0f172a]"
-          >Activities</RouterLink
+          >{{ route.name }}</RouterLink
         >
       </nav>
 
