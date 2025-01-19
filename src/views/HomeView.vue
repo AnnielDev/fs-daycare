@@ -25,11 +25,7 @@ import FooterDaycare from '@/components/FooterDaycare.vue'
       />
     </section>
     <section class="flex flex-col items-center gap-2 justify-center my-10">
-      <img
-        src="../assets/owners.jpg"
-        alt=""
-        class="w-[250px] h-[250px] max-lg:w-[200px] max-lg:h-[200px] shadow-gray-300 shadow-lg rounded-full"
-      />
+      <img src="../assets/owners.jpg" alt="" class="img_owners w-[250px] h-[250px] rounded-full" />
 
       <span class="text-[#0f172a] lg:text-xl font-semibold">Frank Berroa and Sofia Castro</span>
       <span class="text-[#0f172a] lg:text-xl font-semibold">(Owners)</span>
@@ -91,6 +87,11 @@ p {
 .img {
   border-radius: 20px;
   border: 1px solid #c8c8c8;
+}
+
+.img_owners {
+  border: 1px solid #c8c8c8;
+  padding: 12px;
 }
 
 article {
