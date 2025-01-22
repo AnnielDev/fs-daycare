@@ -248,7 +248,7 @@ const isLoading = computed(() => {
   </main>
 
   <Dialog
-    v-if="!loading"
+    v-if="!loading && !loadingLast"
     v-model:visible="visible"
     modal
     header="Auth (Optional)"
