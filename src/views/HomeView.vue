@@ -1,6 +1,4 @@
-<script setup lang="ts">
-import FooterDaycare from '@/components/FooterDaycare.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <main>
@@ -20,15 +18,21 @@ import FooterDaycare from '@/components/FooterDaycare.vue'
     <section class="w-full">
       <img
         src="../assets/kid.jpg"
-        alt="image-kid"
+        alt="daycare_image_kid"
         class="img ml-auto mr-auto p-3 animate__animated animate__fadeIn"
       />
     </section>
     <section class="flex flex-col items-center gap-2 justify-center my-10">
-      <img src="../assets/owners.jpg" alt="" class="img_owners w-[250px] h-[250px] rounded-full" />
+      <img
+        src="../assets/owners.jpg"
+        alt="daycare_image_kid"
+        class="img_owners w-[300px] h-[300px] max-lg:w-[250px] max-lg:h-[250px] rounded-full"
+      />
 
-      <span class="text-[#0f172a] lg:text-xl font-semibold">Frank Berroa and Sofia Castro</span>
-      <span class="text-[#0f172a] lg:text-xl font-semibold">(Owners)</span>
+      <span class="text-[#0f172a] text-2xl max-lg:text-lg font-semibold"
+        >Frank Berroa and Sofia Castro</span
+      >
+      <span class="text-[#0f172a] text-2xl max-lg:text-lg font-semibold">(Owners)</span>
     </section>
     <section class="flex max-lg:flex-wrap">
       <div class="flex flex-col gap-6 mb-6">
@@ -40,7 +44,7 @@ import FooterDaycare from '@/components/FooterDaycare.vue'
         >
       </div>
       <div>
-        <img src="../assets/kid2.jpg" class="img ml-auto mr-auto p-3" alt="" />
+        <img src="../assets/kid2.jpg" class="img ml-auto mr-auto p-3" alt="daycare_image_kid" />
       </div>
     </section>
 
@@ -64,8 +68,6 @@ import FooterDaycare from '@/components/FooterDaycare.vue'
       </div>
     </section>
   </main>
-
-  <FooterDaycare />
 </template>
 
 <style scoped>

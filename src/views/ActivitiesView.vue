@@ -5,8 +5,6 @@ import {
   FaPaintbrush,
   AnOutlinedScissor,
 } from '@kalimahapps/vue-icons'
-
-import FooterDaycare from '@/components/FooterDaycare.vue'
 </script>
 <template>
   <main>
@@ -36,9 +34,9 @@ import FooterDaycare from '@/components/FooterDaycare.vue'
           </div>
           <div class="flex flex-col">
             <h4 class="text-[#0f172a] font-semibold">Storytelling</h4>
-            <span class="text-[#0f172a]">
+            <p class="text-[#0f172a]">
               Enhance imagination and language skills through interactive storytelling sessions.
-            </span>
+            </p>
           </div>
         </article>
         <article class="flex items-center gap-6">
@@ -47,9 +45,9 @@ import FooterDaycare from '@/components/FooterDaycare.vue'
           </div>
           <div class="flex flex-col">
             <h4 class="text-[#0f172a] font-semibold">Music & Movement</h4>
-            <span class="text-[#0f172a]">
+            <p class="text-[#0f172a]">
               Boost physical coordination and rhythm with music and dance activities.
-            </span>
+            </p>
           </div>
         </article>
       </div>
@@ -75,29 +73,27 @@ import FooterDaycare from '@/components/FooterDaycare.vue'
             <FaPaintbrush class="text-2xl text-[#ffcc00]" />
             <div>
               <h4 class="text-[#0f172a] font-semibold">Painting</h4>
-              <span class="text-[#0f172a] leading-loose"
-                >Experiment with colors and textures using different painting techniques.</span
-              >
+              <p class="text-[#0f172a] leading-loose">
+                Experiment with colors and textures using different painting techniques.
+              </p>
             </div>
           </article>
           <article class="flex items-stretch gap-4 mt-6">
             <AnOutlinedScissor class="scissor-icon text-[#ffcc00]" />
             <div>
               <h4 class="text-[#0f172a] font-semibold">Crafting</h4>
-              <span class="text-[#0f172a] leading-loose"
-                >Create fun and imaginative crafts using safe, child-friendly materials.</span
-              >
+              <p class="text-[#0f172a] leading-loose">
+                Create fun and imaginative crafts using safe, child-friendly materials.
+              </p>
             </div>
           </article>
         </div>
       </article>
       <article>
-        <img src="../assets/kids.jpg" alt="" class="lg:max-w-2xl p-3" />
+        <img src="../assets/kids.jpg" alt="daycare_image_kid" class="lg:max-w-2xl p-3" />
       </article>
     </section>
   </main>
-
-  <FooterDaycare />
 </template>
 
 <style scoped>
