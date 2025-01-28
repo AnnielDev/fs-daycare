@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { AkTiktokFill, AkInstagramFill, BsFacebook } from '@kalimahapps/vue-icons'
+const date = new Date()
 </script>
 <template>
   <footer
@@ -16,7 +17,7 @@ import { AkTiktokFill, AkInstagramFill, BsFacebook } from '@kalimahapps/vue-icon
         <BsFacebook class="icon" />
       </a>
     </div>
-    <span>© FS Daycare 2025, Creating a World of Fun and Learning</span>
+    <span>© FS Daycare {{ date.getFullYear() }}, Creating a World of Fun and Learning</span>
   </footer>
 </template>
 
