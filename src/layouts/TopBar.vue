@@ -58,61 +58,59 @@ async function scrollTo() {
 </script>
 
 <template>
-  <body>
-    <header class="relative bg-[#ffdc2e]">
-      <div class="navbar h-[60px] flex justify-between items-center w-full py-3 px-10">
-        <div>
-          <h2 class="lg:text-xl max-lg:text-lg font-bold text-[#0f172a]">FS Daycare</h2>
-        </div>
-        <nav class="nav flex gap-10">
-          <RouterLink
-            v-for="(route, index) in routes"
-            :key="index"
-            :to="route.route"
-            class="link capitalize flex outline-none items-center gap-2 lg:text-lg max-lg:text-md font-normal text-[#0f172a]"
-          >
-            <component :is="route.icon" class="inline-block" />
-            {{ route.name }}</RouterLink
-          >
-        </nav>
+  <header class="relative bg-[#ffdc2e]">
+    <div class="navbar h-[60px] flex justify-between items-center w-full py-3 px-10">
+      <div>
+        <h2 class="lg:text-xl max-lg:text-lg font-bold text-[#0f172a]">FS Daycare</h2>
+      </div>
+      <nav class="nav flex gap-10">
+        <RouterLink
+          v-for="(route, index) in routes"
+          :key="index"
+          :to="route.route"
+          class="link capitalize flex outline-none items-center gap-2 lg:text-lg max-lg:text-md font-normal text-[#0f172a]"
+        >
+          <component :is="route.icon" class="inline-block" />
+          {{ route.name }}</RouterLink
+        >
+      </nav>
 
+      <button
+        class="flex items-center gap-2 border border-black px-4 py-2 rounded-full"
+        @click="scrollTo"
+      >
+        Contact Us <BsArrowRight />
+      </button>
+      <div @click="handleToggle" class="toggle_btn">
+        <CgMenu v-if="!dropDownIsOpen" />
+        <AnOutlinedClose v-else />
+      </div>
+    </div>
+
+    <div class="dropdown_menu open" ref="dropDownMenu">
+      <li v-for="(route, index) in routes" :key="index">
+        <RouterLink
+          :to="route.route"
+          class="link gap-2 flex items-center lg:text-lg outline-none max-lg:text-md font-normal capitalize"
+        >
+          <component :is="route.icon" class="inline-block" />{{ route.name }}</RouterLink
+        >
+      </li>
+
+      <li>
         <button
-          class="flex items-center gap-2 border border-black px-4 py-2 rounded-full"
+          class="flex items-center cursor-pointer gap-2 w-full justify-center border mr-auto text-[#0f172a] ml-auto border-black px-4 py-2 rounded-full"
           @click="scrollTo"
         >
           Contact Us <BsArrowRight />
         </button>
-        <div @click="handleToggle" class="toggle_btn">
-          <CgMenu v-if="!dropDownIsOpen" />
-          <AnOutlinedClose v-else />
-        </div>
-      </div>
+      </li>
+    </div>
+  </header>
 
-      <div class="dropdown_menu open" ref="dropDownMenu">
-        <li v-for="(route, index) in routes" :key="index">
-          <RouterLink
-            :to="route.route"
-            class="link gap-2 flex items-center lg:text-lg outline-none max-lg:text-md font-normal capitalize"
-          >
-            <component :is="route.icon" class="inline-block" />{{ route.name }}</RouterLink
-          >
-        </li>
+  <RouterView />
 
-        <li>
-          <button
-            class="flex items-center cursor-pointer gap-2 w-full justify-center border mr-auto text-[#0f172a] ml-auto border-black px-4 py-2 rounded-full"
-            @click="scrollTo"
-          >
-            Contact Us <BsArrowRight />
-          </button>
-        </li>
-      </div>
-    </header>
-
-    <RouterView />
-
-    <FooterDaycare />
-  </body>
+  <FooterDaycare />
 </template>
 
 <style scoped>
