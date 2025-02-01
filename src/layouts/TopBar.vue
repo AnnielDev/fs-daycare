@@ -123,6 +123,7 @@ header {
 }
 
 .container {
+  min-width: 100vw;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
